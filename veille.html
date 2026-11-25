@@ -1,11 +1,32 @@
 <!DOCTYPE html>
 <html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Veille technologique — Prénom Nom</title><meta name="description" content="Portfolio BTS SIO option SISR de Prénom Nom"><link rel="stylesheet" href="style.css"></head>
-<body><header><a class="brand" href="index.html">Prénom Nom</a><nav><a href="index.html">Accueil</a><a href="parcours.html">Parcours</a><a href="realisations.html">Réalisations</a><a href="stages.html">Stages</a><a href="veille.html" aria-current=page>Veille</a><a href="tableau-synthese.html">Synthèse E5</a><a href="contact.html">Contact</a></nav></header>
+<body><header><a class="brand" href="index.html">Prénom Nom</a><nav><a href="index.html">Accueil</a><a href="parcours.html">Parcours</a><a href="realisations.html">Réalisations</a><a href="stages.html">Stages</a><a href="veille.html" aria-current=page>Veille</a><a href="bilan.html">Bilan</a><a href="contact.html">Contact</a></nav></header>
 <main><h1>Veille technologique</h1>
-<section><h2>Sujet suivi</h2><p><span class="ph">[ex. Vulnérabilités critiques sur les services exposés (Nginx, OpenSSH...)]</span></p><p>Pourquoi ce sujet : <span class="ph">[lien avec votre option et vos réalisations]</span></p></section>
-<section><h2>Sources et outils</h2><ul><li><span class="ph">[ANSSI / CERT-FR]</span></li><li><span class="ph">[source 2]</span></li><li>Agrégateur : <span class="ph">[Feedly, Inoreader...]</span></li></ul><p>Fréquence : <span class="ph">[1 fois par semaine]</span></p></section>
-<section><h2>Synthèses</h2><table><thead><tr><th>Date</th><th>Article</th><th>Résumé et analyse</th></tr></thead><tbody>
-<tr><td><span class="ph">[jj/mm/aaaa]</span></td><td><span class="ph">[titre + lien]</span></td><td><span class="ph">[3 à 5 lignes avec votre avis]</span></td></tr>
-<tr><td><span class="ph">[jj/mm/aaaa]</span></td><td><span class="ph">[titre + lien]</span></td><td><span class="ph">[résumé]</span></td></tr></tbody></table></section></main>
+<section><h2>Sujet suivi</h2><p>Retrouver la vie entière d'une personne grâce à l'OSINT.</p>
+<p>Pourquoi ce sujet : montrer qu'il est facile de retrouver des informations sur une personne avec seulement un navigateur et quelques outils gratuits. L'OSINT (renseignement d'origine sources ouvertes) est la phase de reconnaissance d'une attaque ou d'un audit : en tant que futur administrateur systèmes et réseaux, je dois savoir ce qu'un attaquant peut apprendre sur une organisation ou sur ses utilisateurs.</p></section>
+
+<section><h2>Les outils, par famille</h2>
+<div class="scroll"><table><thead><tr><th>Famille</th><th>Outils</th><th>Ce qu'ils permettent</th></tr></thead><tbody>
+<tr><th scope="row">Pseudos et comptes</th><td><a href="https://github.com/sherlock-project/sherlock">Sherlock</a>, <a href="https://github.com/soxoj/maigret">Maigret</a>, WhatsMyName</td><td>Chercher où un même pseudo existe. Maigret couvre plus de sites que Sherlock et produit des rapports.</td></tr>
+<tr><th scope="row">E-mails, domaines et fuites</th><td>theHarvester, crt.sh, Have I Been Pwned</td><td>Trouver des adresses, des sous-domaines et des certificats, et vérifier si une adresse apparaît dans une fuite connue.</td></tr>
+<tr><th scope="row">Images et métadonnées</th><td>ExifTool, recherche d'image inversée (Google, Yandex, TinEye)</td><td>Lire la date, l'appareil et parfois la position d'une photo, ou retrouver l'origine d'une image.</td></tr>
+<tr><th scope="row">Géospatial</th><td><a href="https://github.com/bilawalsidhu/gods-eye-view">God's Eye View</a>, OpenSky Network</td><td>Afficher sur un globe 3D des avions, des navires et des satellites à partir de données publiques.</td></tr>
+<tr><th scope="row">Automatisation</th><td>SpiderFoot, Maltego, Recon-ng</td><td>Enchaîner plusieurs sources et relier les résultats entre eux.</td></tr>
+</tbody></table></div>
+<p class="note">Attention : l'ancien projet « God's Eye » (e-mail, IP, pseudos) est archivé et n'a aucun rapport avec God's Eye View.</p></section>
+
+<section><h2>Limites, droit et protection</h2>
+<ul><li><strong>Limites :</strong> un pseudo identique sur deux sites ne prouve pas qu'il s'agit de la même personne, il faut recouper les résultats.</li>
+<li><strong>Droit :</strong> une donnée publique n'est pas libre d'usage. Le RGPD et le Code pénal encadrent la collecte et l'usage de données personnelles.</li>
+<li><strong>Se protéger :</strong> utiliser des pseudos et des e-mails différents selon les usages, régler la confidentialité des comptes, supprimer les métadonnées des photos et surveiller les fuites.</li></ul></section>
+
+<section><h2>Sources et outils de veille</h2><ul><li>GitHub : dépôts des outils, onglet Trending et listes « awesome-osint »</li><li>Presse spécialisée : articles sur les tableaux de bord OSINT</li><li>Guides d'outils et documentation officielle de chaque projet</li></ul>
+<p>Agrégateur : <span class="ph">[Feedly, Inoreader...]</span> — Fréquence : <span class="ph">[1 fois par semaine]</span></p></section>
+
+<section><h2>Synthèses</h2><div class="scroll"><table><thead><tr><th>Date</th><th>Article</th><th>Résumé et analyse</th></tr></thead><tbody>
+<tr><td>août 2026</td><td><a href="https://github.com/bilawalsidhu/gods-eye-view">God's Eye View (GitHub)</a></td><td>Console open source en JavaScript et CesiumJS qui fonctionne en local et regroupe une dizaine de couches de données publiques (vols, navires, satellites). Elle a été très médiatisée cet été. Elle prouve qu'une seule personne peut centraliser des données ouvertes, sans aucun accès privilégié.</td></tr>
+<tr><td>nov. 2026</td><td><a href="https://forklog.com/en/?p=106859">Forklog : les tableaux de bord de guerre créés par IA</a></td><td>L'article rappelle que presque toutes les données de ces tableaux viennent de sources publiques, et que leur auteur parle lui-même d'une « interface flashy » plus que d'une vraie analyse. Il faut donc garder un esprit critique face à ces outils.</td></tr>
+<tr><td>oct. 2026</td><td><a href="https://dataimpulse.com/?p=373641">Guide des outils OSINT en 2026 (DataImpulse)</a></td><td>Les outils de pseudos produisent des comptes candidats, pas des identités vérifiées. Le choix de l'outil dépend de la question posée, et chaque résultat doit être vérifié et documenté.</td></tr>
+</tbody></table></div></section></main>
 <footer><p>Portfolio BTS SIO SISR — session <span class="ph">[année]</span>. Les données sensibles (IP, mots de passe, noms) sont anonymisées.</p><p><a href="#top">Haut de page</a></p></footer></body></html>
