@@ -24,3 +24,4 @@ section{margin-top:2.5rem}.lead{font-size:1.15rem;color:var(--muted);max-width:4
 footer{display:flex;flex-wrap:wrap;justify-content:space-between;gap:.5rem;padding:1.5rem clamp(1rem,5vw,3rem) calc(1.5rem + env(safe-area-inset-bottom));border-top:1px solid var(--line);color:var(--muted);font-size:.9rem}footer p{margin:0}
 @media (max-width:720px){.hero{grid-template-columns:1fr}.art{max-width:18rem}.meta{grid-template-columns:1fr}}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+figure img{display:block;width:100%;height:auto;border:1px solid var(--line);border-radius:8px;background:var(--surface)}
